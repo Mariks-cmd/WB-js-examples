@@ -1,0 +1,22 @@
+/** @format */
+
+#output {
+    padding: 10px;
+  }
+  .btn {
+    font-size: 20px;
+    min-width: 40px;
+    margin: 0 10px 10px 10px;
+    border-radius: 3px;
+  }
+  
+  .btn.green {
+    background: rgb(157, 211, 157);
+  }
+  
+  @media only screen and (max-width: 600px) {
+    #output :nth-child(3n) {
+        display: none;
+    }
+  }
+  

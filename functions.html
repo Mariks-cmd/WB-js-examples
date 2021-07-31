@@ -1,0 +1,79 @@
+<!doctype html>
+
+<a href="index.html">Index</a>
+<a href="42.html">42 task</a>
+<pre id="output"></pre>
+
+<script>
+
+    let output = document.getElementById('output');
+    function add(text) {
+        let new_line = '\n';
+        output.append(text + new_line);
+    }
+
+    function a1(a, b) {
+        return a + b;
+    }
+
+    add(a1(2, "a"));
+
+    let a2 = function (a) {
+        return a.length;
+    };
+
+    add(a2('hello world!') + "\n");
+    // Third example
+
+    let a3 = function func(a, count) {
+        if (count > 0) {
+            add(a[--count]);
+            func(a, count);
+        }
+    };
+
+    const masivs = ['first', 'second', 'third'];
+
+    a3(masivs, a2(masivs));
+
+
+    let a4 = (b, c) => {
+        return b - c;
+    };
+
+    add(a4(8, 5));
+/*************************/
+
+function b1(greeting, callback) {
+    add(greeting);
+    callback();
+}
+
+b1('Hello ', function () {
+    add("World!");
+});
+
+let count = 5;
+
+const run = function () {
+    const d = new Date();
+    console.log('+' + d.getTime());
+    if (--count) {
+        console.log(count);
+        timeout();
+    }
+};
+const timeout = function () {
+    setTimeout(run, 1500);
+}
+
+timeout();
+
+
+
+
+
+
+
+
+</script>
